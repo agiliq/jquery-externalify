@@ -1,0 +1,136 @@
+<html>
+    
+    <head>
+        <script src="lib/jquery-1.7.2.min.js" type="text/javascript" ></script>
+        <script src="externalify.js" src="text/javascript" ></script>
+        
+        <script type="text/javascript">
+          $(document).ready(function(){
+                    
+          $("button#btn_body").bind('click',function(){
+      
+            $("body").externalify({"class":"external"});
+      
+        });
+          
+           $("button#btn_samplediv").bind('click',function(){
+      
+            $("#samplediv").externalify({"class":"external"});
+      
+        });
+        
+         $("button#btn_div").bind('click',function(){
+      
+            $("div").externalify({"class":"external"});
+      
+        });
+        
+        
+         $("button#btn_span").bind('click',function(){
+      
+            $("span").externalify({"class":"external"});
+      
+        });
+          
+          });
+            
+  	  </script>
+        
+        <style>
+          .external{
+            color:white;
+            background-color:red; 
+            letter-spacing : 3pt;
+          }
+          
+          table#table1{
+          
+           border : 1px solid green;
+         
+          }
+          
+          table#table1 th {
+           color:white;
+           background-color : green;
+            
+          }
+          
+          table#table1 td{
+            border : 1px solid green;
+            
+           // padding : 5px 5px 5px 5px;
+          }
+          
+        
+        </style>
+        
+      
+    </head>
+    <body>
+
+    <h4>Click these buttons or use console to test this , refresh page to reset</h4>
+    <button id="btn_body">body</button> 
+    <button id="btn_samplediv">samplediv</button>
+    <button id="btn_div">div</button>
+    <button id="btn_span">Span</button>
+   
+    <center>
+    <table  id="table1">
+       
+       <thead>
+           <tr>
+               <th>
+                  Inner links
+               </th>
+               <th>
+                  Outer Links 
+               </th>
+              
+           </tr>         
+       </thead>
+       <tr>
+           <td>
+                <a href="gggg" >gggg</a><br>
+                <a href="aaa" >aaa</a><br>
+                <a href="bbb" >bbb</a><br>
+                <a href="ccc" >ccc</a><br>
+                <a href="ddd" >ddd</a><br>
+                <a href="eee" >eee</a><br>
+           </td>
+           
+           <td>
+                <a href="http://google.com" >http://google.com</a><br>
+                <a href="https://google.com" >https://google.com</a><br>
+                <a href="http://agiliq.com" >http://agiliq.com</a><br>
+                <a href="https://agiliq.com" >https://agiliq.com</a><br>
+                <a href="" ></a><br>
+                <a href="" ></a><br>
+           
+           </td>
+          
+       </tr>
+         
+       
+    </table>
+          </center>
+          <br>
+          <div style="background-color:#ffffdc;width:650px" id="samplediv">
+                 <h3>Div elements containing some links and other divs,p,span ,with div id = samplediv</h3>
+                 <a href="gggg">gggg</a><br>    
+                 <a href="http://google.com">http://google.com</a><br>
+                 <a href="https://google.com">https://google.com</a><br>
+                 <p>
+                 <a href="http://google.com">http://google.com in p</a><br>
+                 <a href="gggg">gggg in p</a><br>
+                 </p>
+                 <span>
+                 <a href="http://google.com">http://google.com in span</a><br>
+                 <a href="gggg">gggg in span</a><br>
+                 </span>
+                 <div>
+                 <a href="http://google.com">http://google.com in div</a><br>  
+                 <a href=""></a><br>
+                 </div>
+          </div>
+  
+</html>
