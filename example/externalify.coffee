@@ -22,7 +22,7 @@
     if links.length is 0
       return
     
-    console.log "not single,not empty"
+    
     
     for i in links
       if (i.href.indexOf("http://"))or(i.href.indexOf("https://"))
