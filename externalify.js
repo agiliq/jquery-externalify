@@ -10,7 +10,7 @@
         if (document.getElementById(this.selector.substr(1, this.selector.length)).nodeName === "A") {
           link = $(this.selector);
           if ((link[0].toString().indexOf("http://") === 0) || (link[0].toString().indexOf("https://") === 0)) {
-            if (link[0] !== window.location.host) {
+            if (link[0].host !== window.location.host) {
               link.attr(settings);
               return;
             }
@@ -22,8 +22,8 @@
       _results = [];
       for (_i = 0, _len = links.length; _i < _len; _i++) {
         i = links[_i];
-        if ((i.toString().indexOf("http://") === 0) || (i.toString().indexOf("https://") === 0)) {
-          if (i !== window.location.host) {
+        if ((i.href.indexOf("http://")) || (i.href.indexOf("https://"))) {
+          if (i.host !== window.location.host) {
             _results.push($(i).attr(settings));
           } else {
             _results.push(void 0);
