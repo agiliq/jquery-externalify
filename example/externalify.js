@@ -24,9 +24,12 @@
       for (_i = 0, _len = links.length; _i < _len; _i++) {
         i = links[_i];
         if ((i.toString().indexOf("http://") === 0) || (i.toString().indexOf("https://") === 0)) {
+          console.log(i);
+          console.log(i.host);
           console.log(i.toString());
           console.log("Before : " + $(i).attr("class"));
           if (i !== window.location.host) {
+            i;
             $(i).attr(settings);
             _results.push(console.log("After : " + $(i).attr("class")));
           } else {

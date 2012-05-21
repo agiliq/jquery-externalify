@@ -27,10 +27,12 @@
     for i in links
         
       if (i.toString().indexOf("http://") is 0)or(i.toString().indexOf("https://") is 0)
+        console.log i
+        console.log i.host
         console.log i.toString()
         console.log "Before : "+$(i).attr("class")
         unless i is window.location.host
-          
+          i
           $(i).attr settings
           console.log "After : "+$(i).attr("class")
           
