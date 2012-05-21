@@ -19,10 +19,12 @@
       }
       links = $(this.selector + " a");
       if (links.length === 0) return;
+      console.log("not single,not empty");
       _results = [];
       for (_i = 0, _len = links.length; _i < _len; _i++) {
         i = links[_i];
         if ((i.toString().indexOf("http://") === 0) || (i.toString().indexOf("https://") === 0)) {
+          console.log(i);
           if (i !== window.location.host) {
             _results.push($(i).attr(settings));
           } else {
