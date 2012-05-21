@@ -19,12 +19,20 @@
       }
       links = $(this.selector + " a");
       if (links.length === 0) return;
+      console.log("not single,not empty");
       _results = [];
       for (_i = 0, _len = links.length; _i < _len; _i++) {
         i = links[_i];
-        if ((i.toString().indexOf("http://") === 0) || (i.toString().indexOf("https://") === 0)) {
-          if (i !== window.location.host) {
-            _results.push($(i).attr(settings));
+        console.log("href : " + i.href);
+        if ((i.href.indexOf("http://")) || (i.href.indexOf("https://"))) {
+          console.log(i);
+          console.log(i.host);
+          console.log(i.href);
+          console.log(i.toString());
+          console.log("Before : " + $(i).attr("class"));
+          if (i.host !== window.location.host) {
+            $(i).attr(settings);
+            _results.push(console.log("After : " + $(i).attr("class")));
           } else {
             _results.push(void 0);
           }
