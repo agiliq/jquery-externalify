@@ -30,8 +30,7 @@
           console.log(i.href);
           console.log(i.toString());
           console.log("Before : " + $(i).attr("class"));
-          if (i !== window.location.host) {
-            i;
+          if (i.host !== window.location.host) {
             $(i).attr(settings);
             _results.push(console.log("After : " + $(i).attr("class")));
           } else {

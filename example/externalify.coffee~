@@ -34,8 +34,8 @@
         console.log i.href
         console.log i.toString()
         console.log "Before : "+$(i).attr("class")
-        unless i is window.location.host
-          i
+        unless i.host is window.location.host
+          
           $(i).attr settings
           console.log "After : "+$(i).attr("class")
           
