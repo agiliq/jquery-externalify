@@ -16,16 +16,13 @@ describe "", ->
     
     
   afterEach ->
-    console.log "Beforer : "
-    console.log $('#link')
-    #document.body.parentNode.removeChild(document.getElementById("divlink"))
+    
     $("#divlink").remove()
-    console.log "After : "
-    console.log $('#link')
+    
   
   it "external http rel : external",->
     $("#link").attr "href", "http://google.com"
-    console.log $("#link").attr("href") + " ---"
+    
     $("#link").externalify()
     expect($("#link").attr("rel")).toBe("external")
   
