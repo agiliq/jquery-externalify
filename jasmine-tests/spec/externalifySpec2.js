@@ -13,15 +13,10 @@
       return document.body.appendChild(divele);
     });
     afterEach(function() {
-      console.log("Beforer : ");
-      console.log($('#link'));
-      $("#divlink").remove();
-      console.log("After : ");
-      return console.log($('#link'));
+      return $("#divlink").remove();
     });
     it("external http rel : external", function() {
       $("#link").attr("href", "http://google.com");
-      console.log($("#link").attr("href") + " ---");
       $("#link").externalify();
       return expect($("#link").attr("rel")).toBe("external");
     });
